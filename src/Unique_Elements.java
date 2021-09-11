@@ -7,13 +7,11 @@ public class Unique_Elements {
         Arrays.sort(orgArray);
         ArrayList<Integer> uniqueArray = new ArrayList<>();
 
-        for(int i = 0; i < orgArray.length-1.; i++){
-            if(i == 0){
-                if(orgArray[i] != orgArray[i + 1]){
-                    uniqueArray.add(orgArray[i]);
-                }
-            }
-            else if(orgArray[i] != orgArray[i + 1] && orgArray[i] != orgArray[i - 1]){
+        if (orgArray[0] != orgArray[1]) {
+            uniqueArray.add(orgArray[0]);
+        }
+        for(int i = 1; i < orgArray.length-1.; i++){
+            if(orgArray[i] != orgArray[i + 1] && orgArray[i] != orgArray[i - 1]){
                 uniqueArray.add(orgArray[i]);
             }
         }
