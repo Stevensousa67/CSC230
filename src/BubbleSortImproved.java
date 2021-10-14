@@ -1,4 +1,5 @@
 // Steven Sousa - 4Cs - Data Structure - 10/12/21
+// 13.1 seconds
 
 import java.util.Random;
 
@@ -9,7 +10,7 @@ public class BubbleSortImproved {
         Random randNum = new Random();
 
         for (int i = 0; i < arr.length; i++) {
-            // Make randNum range from 1 to 5000 so that the chances of a repeated number may be lowered.
+            // Make randNum range from 1 to 500000 so that the chances of a repeated number may be lowered.
             arr[i] = randNum.nextInt(1, 5000000);
         }
 

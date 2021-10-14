@@ -1,15 +1,16 @@
 // Steven Sousa - 4Cs - Data Structure - 10/13/21
+// 3.3 seconds
 
 import java.util.Random;
 
 public class SelectionSort{
     public static void main(String [] args) throws InterruptedException{
-        int [] arr = new int[1000];
+        int [] arr = new int[100000];
         Random randNum = new Random();
 
         for (int i = 0; i < arr.length; i++) {
-            // Make randNum range from 1 to 5000 so that the chances of a repeated number may be lowered.
-            arr[i] = randNum.nextInt(1, 5000);
+            // Make randNum range from 1 to 500000 so that the chances of a repeated number may be lowered.
+            arr[i] = randNum.nextInt(1, 500000);
         }
 
         long startTime = System.nanoTime();
