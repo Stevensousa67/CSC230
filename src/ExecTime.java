@@ -1,7 +1,5 @@
- class ExecTime
-        {
-            public static void main(String[] args) throws InterruptedException
-            {
+ class ExecTime {
+    public static void main(String[] args) throws InterruptedException {
                 int n = 1000000000;
                 long startTime = System.nanoTime();
                 for(int i= 0; i<n; i++) {

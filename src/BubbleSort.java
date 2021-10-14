@@ -1,31 +1,41 @@
-// Steven Sousa - 4Cs - Data Structure - 10/12/21
+// Steven Sousa - 4Cs - Data Structure - 10/13/21
 
-public class BubbleSort{
+import java.util.Random;
+
+class BubbleSort{
     public static void main(String[] args) {
-        int [] arr =  {1,17,3,-7, 7, 2};
-        bubble(arr);
-        for(int i : arr){
-            System.out.println(i);
+        int [] arr = new int[1000];
+        Random randNum = new Random();
+
+        for (int i = 0; i < arr.length; i++) {
+            // Make randNum range from 1 to 5000 so that the chances of a repeated number may be lowered.
+            arr[i] = randNum.nextInt(1, 5000);
         }
+
+        long startTime = System.nanoTime();
+        bubble(arr);
+
+        long endTime = System.nanoTime();
+        long timeElapsed = endTime - startTime;
+        System.out.println("Execution time in nanoseconds: " + timeElapsed);;
     }
 
-    public static void bubble(int[] arr) {
-        int lastSwap = arr.length - 1;
-        for (int i = 1; i < arr.length; i++) {
-            boolean sorted = true;
-            int currentSwap = -1;
+    public static void bubble(int[] arr){
+        int inOrd = 0;
 
-            for (int j = 0; j < lastSwap; j++) {
-                if (arr[j] > arr[j + 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                    sorted = false;
-                    currentSwap = j;
+        while(inOrd < arr.length) {
+            for (int i=1; i < arr.length-inOrd; i++){
+                if (arr[i-1] > arr[i]){
+                    swap( arr,i-1,i);
                 }
+
             }
-            if (sorted) return;
-            lastSwap = currentSwap;
+            inOrd++;
         }
+    }
+    public static void swap(int[]arr,int bi, int i) {
+        int temp = arr[bi];
+        arr[bi] = arr[i];
+        arr[i] = temp;
     }
 }
