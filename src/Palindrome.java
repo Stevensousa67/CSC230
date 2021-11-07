@@ -21,8 +21,10 @@ public class Palindrome {
         int strLength = modifiedString.length();
 
         // Now we insert the string into a stack
-        for (int i = 0; i < strLength; i++) {
-            stack.push(modifiedString.charAt(i));
+        int index = 0;
+        while (index < strLength) {
+            stack.push(modifiedString.charAt(index));
+            index++;
         }
 
         // Now we create a reverse string of modifiedString using the stack
@@ -45,8 +47,10 @@ public class Palindrome {
 
         // Now we insert the string into a stack, so they can be in reverse order for the queue
         Stack<Character> tempStack = new Stack<Character>();
-        for(int i = 0; i < strLength; i++){
-            tempStack.push(modifiedString.charAt(i));
+        int index = 0;
+        while (index < strLength) {
+            tempStack.push(modifiedString.charAt(index));
+            index++;
         }
 
         // Now we add each element of the stack (which will be in reverse) and pop them out from the stack
