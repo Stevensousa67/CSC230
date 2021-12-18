@@ -1,0 +1,53 @@
+Questions:
+
+    1) Explain why a stack is a recursive data structure.
+        A) Because of the stack's nature of FILO. Recursion mimics this behavior where the first recursive call is the
+        last call to be resolved, meaning that the later a function is called, the earlier it'll be returned. This is
+        analogous to the stack push and pop methods.
+
+    2) Describe the difference between a stack and a queue.
+        A) A stack is a data structure that behaves in a first in last out behavior, meaning that the item placed last
+        in the stack will be the first one out of it. Stacks also use one pointer (commonly called top) to access the
+        list. Stack are great for recursion. Queues on the hand, is a first in first out data structure, meaning that
+        the first item placed in a queue will be the first one out of it.Queues need 2 pointers to access the list (one
+        that points to the front of the queue and one that points to the rear of the queue.) Queues are great for issues
+        that need sequential processing.
+
+    3) What is the time efficiency of the push and pop implementations of queues and stacks? (Big O)
+        A) O(1)
+
+    4) When should you use a stack or queue vs Arrays or Lists?
+        A) When the size of the array/list is too big, because adding or removing elements from an array or list takes
+        O(n) time complexity, while stacks and queues take O(1). That can make a big difference when a lot of elements
+        are present.
+
+    5) Stacks (and Queues) can be implemented using either a Linked Lists or dynamic array (ArrayList). For a stack,
+    complete the following chart by filling in the method/approach for implementing the stack push and pop.
+    a) LinkedList
+    b) Dynamic Array
+
+        A)  public static void pushLinkedList(T element){
+                Node temp = new Node(); // create new node
+                temp.data = element;    // fill in the node's data with element received
+                temp.link = top;        // put top reference onto tempS
+                top = temp;             // make top reference the temp
+            }
+            public static void popLinkedList(T element){
+                if(top == null){
+                 exit(1);
+                }
+                else{
+                    top = top.link; // make top point to next node, which deletes the initial head.
+                }
+            }
+
+            public static int[] pushDynamicArray(int[] arr, int element){
+                if(top == arr.length - 1){  // Check if array is full
+                    arr = resize(arr);
+                }
+                arr[++top] = element;
+                return arr
+            }
+            public static void popDynamicArray(int[] arr){
+                top--;
+            }
