@@ -1,11 +1,10 @@
 public class Celsius_Converter {
     public static void main(String[] args){
-        int fahrenheit = 212;
-        int celsius = 37;
+        int fahrenheit = 100;
+        int celsius = 40;
 
         System.out.println(convertToCelsius(fahrenheit));
         System.out.println(convertToFahrenheit(celsius));
-
     }
 
     public static int convertToCelsius(int fahrenheit){

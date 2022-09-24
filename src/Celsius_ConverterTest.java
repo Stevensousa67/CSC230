@@ -1,4 +1,4 @@
-import static org.junit.jupiter.api.Assertions.*;
+/*import static org.junit.jupiter.api.Assertions.*;
 
 class Celsius_ConverterTest {
 
@@ -13,4 +13,4 @@ class Celsius_ConverterTest {
     @org.junit.jupiter.api.Test
     void convertToFahrenheit() {
     }
-}
+}*/

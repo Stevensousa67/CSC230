@@ -1,7 +1,7 @@
 //  Dijkstra’s algorithm is used to find the Shortest Routes in a Weighted Graph
 // You can use a priority queue or a matrix.  This example uses a priority queue
 
-import java.util.*;
+/*import java.util.*;
 
 //  Define the class
 class GraphDA {
@@ -102,7 +102,7 @@ class Main2{
 }
 
 // Node class
-class Node implements Comparator<Node> {
+/*class Node implements Comparator<Node> {
     public int node;
     public int cost;
     public Node() { } //empty constructor
@@ -120,4 +120,4 @@ class Node implements Comparator<Node> {
             return 1;
         return 0;
     }
-}
+}*/
